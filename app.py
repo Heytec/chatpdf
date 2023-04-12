@@ -65,12 +65,14 @@ def qa(file, query, chain_type, k,api_key_pinecode,index_name,environment_pineco
 with st.sidebar:
     st.header('Configurations')
     st.write("Enter OpenAI API key. This costs $. Set up billing at [OpenAI](https://platform.openai.com/account).")
-    apikey = st.text_input("Enter your OpenAI API Key here")
+    apikey = st.text_input("Enter your OpenAI API Key here",type="password")
     os.environ["OPENAI_API_KEY"] = apikey
 
     st.write("Enter Pinecode API key.  [Pinecode](https://www.pinecone.io/).")
 
-    apikey2 = st.text_input("Enter your Pinecone Key here")
+    apikey2 = st.text_input("Enter your Pinecone Key here",type="password")
+
+    #password = st.text_input("Enter a password", type="password")
 
     enviroment_pinecode = st.text_input("Enter your Pinecone your environment Key")
 
