@@ -13,7 +13,7 @@ from langchain.document_loaders import UnstructuredPDFLoader, OnlinePDFLoader
 import pinecone
 
 # Set the path where you want to save the uploaded PDF file
-SAVE_DIR = "pdfs"
+SAVE_DIR = "pdf"
 
 
 st.header('Question Answering with your PDF file')
