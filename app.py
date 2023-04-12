@@ -99,8 +99,8 @@ with left_column:
     if uploaded_file is not None:
         # Save the uploaded file to the specified directory
         file_path = os.path.join(SAVE_DIR, uploaded_file.name)
-        # with open(file_path, "wb") as f:
-        #     f.write(uploaded_file.getbuffer())
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.getbuffer())
         st.success(f"File path {file_path}")
     query = st.text_input("enter your question")
     chain_type = st.selectbox(
